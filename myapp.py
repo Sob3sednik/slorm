@@ -16,7 +16,7 @@ Window.title = 'Приложение'
 class Container(GridLayout):
 
     def calculate(self):
-        #consumption = flow_rate * pipe_area / 3600 (расход)
+        #consumption = flow_rate * (pipe_area ** 2) / 3600 (расход)
         #flow_rate = ??? (скорость потока)
         #pipe_area = 3.14 * pipe_diameter / 4 (площадь трубы)
         #pipe_diameter = ??? (диаметр трубы)
