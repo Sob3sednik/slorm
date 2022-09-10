@@ -18,16 +18,6 @@ Window.title = 'Приложение'
 class Container(GridLayout):
 
     def calculate(self):
-        #consumption = flow_rate * (pipe_area ** 2) / 3600 (расход)
-        #flow_rate = ??? (скорость потока)
-        #pipe_area = 3.14 * pipe_diameter / 4 (площадь трубы)
-        #pipe_diameter = ??? (диаметр трубы)
-        #amount_cu = ??? (содержание меди)
-        #amount_cd = ??? (содержание камдия)
-        #concentration_cd = amount_cd / 1000 (концентрация камдия)
-        #concentration_cu = amount_cu / 1000 (концентрация меди)
-        #amount_zinc_dust = flow_rate * pipe_area * concentration_cu * 1.0288 / 1000 (количество цинковой пыли)
-        #zinc_dust = concentration_cd * 0.5816 * ? * consumtion / 1000 (цинковая пыль)
 
         wb = load_workbook("data.xlsx", read_only=True)
         ws = wb.active
