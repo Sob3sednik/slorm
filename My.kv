@@ -6,19 +6,58 @@
     rows: 2
     test: test
 
-    FloatLayout:
-        cols: 2
+    GridLayout:
+        cols: 3
+
+        BoxLayout:
+            orientation: 'vertical'
+            rows: 4
+            padding: 70
+            spacing: 50
+            Button:
+                background_color: (25/255, 255/266, 25/255)
+                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+                text: "СТАРТ"
+                size_hint: 1, 0.4
+                font_size: 30
+
+                on_release:
+                    root.calculate()
+
+            Button:
+                background_color: (220/255, 20/266, 60/255)
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+                text: "СТОП"
+                size_hint: 1, 0.4
+                font_size: 30
+
+            Button:
+                background_color: (255/255, 255/255, 255/255)
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+                text: "ОТЧЁТ"
+                size_hint: 1, 0.4
+                font_size: 30
+
+            Button:
+                spacing: 100
+                background_color: (0/255, 0/266, 0/255)
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+                text: "ВЫХОД"
+                size_hint: 1, 0.4
+                font_size: 30
+
         ItemLabel:
             id: test
             text: "Результат:"
-            pos_hint: {'top': 1}
+            pos_hint: {'top': 1, 'center_x': 1}
 
-    FloatLayout:
-        Button:
-            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
-            text: "Выполнить расчет"
-            size_hint: 0.3, 0.3
-            font_size: 30
+        BoxLayout:
+            padding: 100
+            Button:
+                pos_hint: {'center_x': 1, 'center_y': 0.8}
+                text: "Выполнить расчет"
+                size_hint: 1, 0.4
+                font_size: 30
 
-            on_release:
-                root.calculate()
+                on_release:
+                    root.calculate()
