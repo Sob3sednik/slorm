@@ -5,6 +5,7 @@
 <Container>
     rows: 2
     test: test
+    test1: test1
 
     GridLayout:
         cols: 3
@@ -38,6 +39,9 @@
                 size_hint: 1, 0.4
                 font_size: 30
 
+                on_release:
+                    root.test()
+
             Button:
                 spacing: 100
                 background_color: (0/255, 0/266, 0/255)
@@ -48,16 +52,9 @@
 
         ItemLabel:
             id: test
-            text: "Результат:"
+            text: "Cd"
             pos_hint: {'top': 1, 'center_x': 1}
 
-        BoxLayout:
-            padding: 100
-            Button:
-                pos_hint: {'center_x': 1, 'center_y': 0.8}
-                text: "Выполнить расчет"
-                size_hint: 1, 0.4
-                font_size: 30
-
-                on_release:
-                    root.calculate()
+        ItemLabel:
+            id: test1
+            text: "Cu"
